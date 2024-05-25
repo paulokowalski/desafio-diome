@@ -1,0 +1,9 @@
+version: '3.9'
+services:
+  apache:
+    image: httpd:latest #ULTIMA VERSAO DA IMAGEM
+    container_name: curso-diome-docker #NOMEANDO CONTAINER
+    ports:
+      - '8080:80' #DIRECIONANDO A PORTA 8080 DO MEU HOST PARA A PORTA 80 DO CONTAINER
+    volumes:
+      - .:/usr/local/apache2/htdocs #FAZENDO BIND DO MEU index.html PARA A PASTA htdocs DO CONTAINER
